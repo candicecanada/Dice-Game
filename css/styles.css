@@ -1,119 +1,140 @@
 /* Chaoqun Ding */
 @font-face {
-    font-family: salsa;
-    src: url(../fonts/Salsa/Salsa-Regular.ttf);
+  font-family: myfont;
+  src: url(../fonts/Fuzzy_Bubbles/FuzzyBubbles-Bold.ttf);
 }
-#wrapper{
-    background-color: lightyellow;
-    max-width: 1080px;
-    display: grid;
-    margin: auto;
-    min-height: 100vh;
-    grid-template-rows: auto 1fr auto;
-    font-family: salsa;
-    color: darkolivegreen;
+#wrapper {
+  background-image: url(../images/dices.jpg);
+  max-width: 1080px;
+  display: grid;
+  margin: auto;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  font-family: myfont;
+  color: darkorange;
 }
-header, footer{
-    text-align: center;
-}
-.align-center{
-    margin: auto;
-    width: max-content;
-}
-.align-right{
-    width: max-content;
-    margin-left: auto;
-    margin-right: 10px;
-}
-#game-board{
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    max-width: 80%;
-    margin: auto;
-    position: relative;
-}
-.player{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto 1fr;
-    border-radius: 10px;
-    padding: 10px;
-    border: solid 2px darkolivegreen;
-}
-.player-score{
-    grid-area: 1/1/span 1/span 2;
-}
-img{
-    display: block;
-    width: 100%;
-}
-#game-result{
-    z-index: -100;
-    opacity: 0;
-}
-#game-rules{
-    z-index: 200;
-    display: none;
-    top: 0
-}
-#game-result, #game-rules{
-    padding: 10px;
-    border-radius: 10px;
-    position: absolute;    
-    background-color: lightyellow;
-    border: solid 2px darkolivegreen;
-}
-h3{
-    text-align: center;
-    margin: 0;
-}
-#player1{
-    background-color: lightpink;
-}
-#player2{
-    background-color: lightblue;
-}
-#control-buttons{
-    grid-column: 1/span 2;
-}
-button{
-    background-color: darkolivegreen;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.not-allowed{
-    cursor: not-allowed;
-    background-color: grey;
-}
-.notice{
-    background-color: brown;
-    color: white;
-    padding: 10px;
-    text-align: left;
-    font-weight: lighter;
-}
-.notice span{
-    color: yellow;
-    font-weight: bold;
-}
-#suggested-width{
-    display: none;
-}
-@media (min-width: 320px){
-    #min-width{
-        display: none;
-    }
-    #suggested-width{
-        display: block;
-    }
+#wrapper header, #wrapper footer {
+  text-align: center;
 }
 
-@media (min-width: 416px) {
-    #suggested-width{
-        display: none;
-    }
+.align-center {
+  margin: auto;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.align-right {
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+#game-board {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+.player {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
+  padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: orange darkorange darkorange orange;
+  border-radius: 10px;
+  background-color: url(../images/dices.jpg);
+}
+
+.player-score {
+  grid-area: 1/1/span 1/span 2;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+#game-result {
+  z-index: -100;
+  opacity: 0;
+  max-width: 200px;
+}
+
+#game-rules {
+  z-index: 200;
+  display: none;
+  top: 0;
+}
+
+#game-result, #game-rules {
+  padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: orange darkorange darkorange orange;
+  border-radius: 10px;
+  position: absolute;
+  background-image: url(../images/dices.jpg);
+}
+
+h3 {
+  text-align: center;
+  margin: 0;
+}
+
+#control-buttons {
+  grid-column: 1/span 2;
+}
+
+button {
+  background-color: black;
+  border-color: orange darkorange darkorange orange;
+  color: darkorange;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover, button:active {
+  border-color: darkorange orange orange darkorange;
+}
+
+#inactive-button {
+  background-color: initial;
+  border-style: solid;
+  border-width: 2px;
+  border-color: orange darkorange darkorange orange;
+  border-radius: 10px;
+  cursor: not-allowed;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+  background-color: grey;
+}
+
+.notice {
+  background-color: darkorange;
+  color: black;
+  padding: 10px;
+  text-align: left;
+  font-weight: lighter;
+}
+.notice span {
+  font-weight: bold;
+}
+
+#suggested-width {
+  display: block;
+}
+
+@media (min-width: 750px) {
+  #suggested-width {
+    display: none;
+  }
 }
