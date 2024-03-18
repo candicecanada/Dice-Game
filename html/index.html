@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+	<!-- author: Chaoqun Ding -->
+	<head>
+		<title>Dice Game | Chaoqun Ding</title>
+		<meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/styles.css">
+		<script src="../scripts/jquery-3.7.1.min.js"></script>
+        <script src="../scripts/dice_game.js" defer></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="../favicon_io/site.webmanifest">
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1>Dice Game</h1>
+                <p id="suggested-width" class="notice">For better experience, enlarge the screen width to at least <span>750px</span>.</p>
+            </header>
+			<main>
+                <div class="align-right">
+                    <button id="game-rules-button">Game Rules</button>
+                </div>
+                <div id="game-board">
+                    <div id="player1" class="player">
+                        <div class="player-score">
+                            <h2>Me</h2>
+                            <div>
+                                <p>Current Score: <span id="player1-current-score"></span></p>
+                                <p>Total Score: <span id="player1-total-score"></span></p>
+                            </div>
+                        </div>
+                        <div class="dice-area" id="player1-dice1">
+                            <h3>Dice 1</h3>
+                            <img src="../images/dice1.png" alt="Dice Point 1">
+                        </div>
+                        <div class="dice-area" id="player1-dice2">
+                            <h3>Dice 2</h3>
+                            <img src="../images/dice1.png" alt="Dice Point 1">
+                        </div>
+                    </div>
+                    <div id="player2" class="player">
+                        <div class="player-score">
+                            <h2>Opponent</h2>
+                            <div>
+                                <p>Current Score: <span id="player2-current-score"></span></p>
+                                <p>Total Score: <span id="player2-total-score"></span></p>
+                            </div>
+                        </div>
+                
+                        <div class="dice-area" id="player2-dice1">
+                            <h3>Dice 1</h3>
+                            <img src="../images/dice1.png" alt="Dice Point 1">
+                        </div>
+                        <div class="dice-area" id="player2-dice2">
+                            <h3>Dice 2</h3>
+                            <img src="../images/dice1.png" alt="Dice Point 1">
+                        </div>
+                    </div>
+                    <div id="game-result">
+                        <h3>You Won / You Lose</h3>
+                        <img src="../images/win.gif" alt="">
+                        <p>Game Ratio: <span id="game-ratio"></span></p>
+                        <div class="align-center">
+                            <button id="close-game-result-button">Close</button>
+                        </div>
+                    </div>
+                    <div id="game-rules">
+                        <div class="align-right">
+                            <button id="close-game-rules-button">Close</button>
+                        </div>
+                        <h3>How to Play:</h3>
+                        <ul>
+                            <li>To start, click the "Roll Dice" button.</li>
+                            <li>To advance to the next round, clickthe "Roll Dice" button again.</li>
+                            <li>After three rounds, the game is over and the final score is calculated.</li>
+                            <li>If you want to play again, click the "New Game" button or refresh the page.</li>
+                        </ul>
+                        <h3>Rules:</h3>
+                        <ul>
+                            <li>Each round, you and the computer both roll a pair of dice.</li>
+                            <li>Your score for that round will be based on the sum of the dice.</li>
+                            <li>If you roll doubles (e.g. a 3 and a 3) then your score is multiplied by 2.</li>
+                            <li>Rolling a 1 will give you a score of 0 for that round.</li>
+                            <li>The player who has the most points at the end of three rounds is the winner.</li>
+                        </ul>
+                        <h3>Note:</h3>
+                        <p>You can always find this window by clicking the <button id="inactive-button">Game Rules</button> button on the upper right corner.</p>
+                    </div>
+                    <div id="control-buttons">
+                        <button id="new-game-button">New Game</button>
+                        <button id="roll-dice-button">Roll Dice</button>
+                    </div>
+                </div>
+			</main>
+			<footer>
+				<h3>Dice Game | Chaoqun Ding</h3>
+			</footer>
+		</div>
+	</body>
+</html>
